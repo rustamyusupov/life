@@ -1,6 +1,4 @@
-_design/
-build/
-node_modules/
-.publish/
 .DS_Store
-*.log
+.vscode
+dist
+node_modules
