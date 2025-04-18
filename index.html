@@ -7,9 +7,44 @@
     <title>Life</title>
   </head>
   <body>
-    <div class="container">
+    <main class="container">
+      <h1 id="title" class="title">A 90-Year Human Life in Weeks</h1>
+      <form id="form" class="form">
+        <div class="group">
+          <label class="label">Sex</label>
+          <div class="sex">
+            <div class="radio">
+              <input id="male" name="sex" value="male" type="radio" />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio">
+              <input id="female" name="sex" value="female" type="radio" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <label class="label">Age</label>
+          <input id="age" name="age" min="0" max="122" type="number" />
+        </div>
+        <div class="group">
+          <label class="label" for="country">Place of birth</label>
+          <select id="country" name="country">
+            <option value="" disabled selected>Select country</option>
+          </select>
+        </div>
+      </form>
+      <p class="description">
+        Your sex and place of birth affect your
+        <a
+          class="link"
+          href="https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy#UN:_Estimate_of_life_expectancy_for_various_ages_in_2023"
+        >
+          average life expectancy</a
+        >.
+      </p>
       <p id="version" class="version"></p>
-    </div>
+    </main>
     <script type="module" src="src/index.js"></script>
   </body>
 </html>

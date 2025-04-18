@@ -12,15 +12,68 @@
   padding: 0;
 }
 
+select {
+  height: 23px;
+}
+
 .container {
+  align-items: center;
   display: flex;
-  height: 100dvh;
   flex-direction: column;
+  height: 100dvh;
   padding: 16px;
 }
 
+.title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.group {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sex {
+  display: flex;
+  gap: 4px;
+}
+
+.label {
+  text-align: center;
+  width: 100%;
+}
+
+.radio {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.description {
+  font-size: 10px;
+  text-align: center;
+
+  & > a {
+    font-size: 10px;
+    underline: none;
+  }
+}
+
 .version {
+  align-self: flex-end;
   color: lightgray;
   margin-top: auto;
-  align-self: flex-end;
 }
