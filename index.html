@@ -7,8 +7,11 @@
     <title>Life</title>
   </head>
   <body>
-    <main class="container">
-      <h1 id="title" class="title">A 90-Year Human Life in Weeks</h1>
+    <main>
+      <h1 class="title">
+        Your <span id="expectancy" class="expectancy">90</span>-Year
+        Life in Weeks
+      </h1>
       <form id="form" class="form">
         <div class="group">
           <label class="label">Sex</label>
@@ -25,26 +28,36 @@
         </div>
         <div class="group">
           <label class="label">Age</label>
-          <input id="age" name="age" min="0" max="122" type="number" />
+          <input
+            class="age"
+            id="age"
+            name="age"
+            min="0"
+            max="150"
+            type="number"
+            tabindex="0"
+          />
         </div>
         <div class="group">
-          <label class="label" for="country">Place of birth</label>
-          <select id="country" name="country">
+          <label class="label" for="country">Country</label>
+          <select id="country" class="country" name="country">
             <option value="" disabled selected>Select country</option>
           </select>
         </div>
       </form>
       <p class="description">
-        Your sex and place of birth affect your
-        <a
-          class="link"
-          href="https://en.wikipedia.org/wiki/List_of_countries_by_life_expectancy#UN:_Estimate_of_life_expectancy_for_various_ages_in_2023"
-        >
-          average life expectancy</a
-        >.
+        Your sex and country affect your
+        <a id="link" class="link" href=""> average life expectancy</a>.
       </p>
-      <p id="version" class="version"></p>
+      <section class="container">
+        <ol id="years" class="years"></ol>
+        <ol id="weeks" class="weeks"></ol>
+        <table id="table" class="table"></table>
+      </section>
     </main>
+    <footer class="footer">
+      <p id="version" class="version"></p>
+    </footer>
     <script type="module" src="src/index.js"></script>
   </body>
 </html>

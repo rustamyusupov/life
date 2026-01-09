@@ -12,11 +12,8 @@
   padding: 0;
 }
 
-select {
-  height: 23px;
-}
-
-.container {
+body {
+  min-width: 320px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -24,14 +21,21 @@ select {
   padding: 16px;
 }
 
-.title {
+ol {
+  list-style: none;
+}
+
+.title,
+.expectancy {
   font-size: 40px;
+  line-height: 1;
   margin-bottom: 20px;
   text-align: center;
 }
 
 .form {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
   margin-bottom: 8px;
@@ -46,14 +50,23 @@ select {
   gap: 4px;
 }
 
+.label {
+  text-align: center;
+  width: 100%;
+}
+
 .sex {
   display: flex;
   gap: 4px;
 }
 
-.label {
-  text-align: center;
-  width: 100%;
+.age {
+  min-width: 50px;
+}
+
+.country {
+  height: 23px;
+  width: 125px;
 }
 
 .radio {
@@ -64,16 +77,62 @@ select {
 
 .description {
   font-size: 10px;
+  margin-bottom: 20px;
   text-align: center;
+}
 
-  & > a {
-    font-size: 10px;
-    underline: none;
-  }
+.link {
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.weeks {
+  display: flex;
+  grid-column: 2;
+  justify-content: space-between;
+}
+
+.years {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  grid-row: 2;
+}
+
+.year {
+  padding-right: 4px;
+  text-align: right;
+  line-height: 1;
+}
+
+.table {
+  display: grid;
+  gap: 2px;
+  grid-column: 2;
+  grid-template-columns: repeat(52, 1fr);
+}
+
+.cell {
+  aspect-ratio: 1;
+  background: #e0e0e0;
+  border-radius: 2px;
+}
+
+.cell.lived {
+  background-color: #777;
+}
+
+.footer {
+  margin-top: auto;
+  width: 100%;
 }
 
 .version {
-  align-self: flex-end;
   color: lightgray;
-  margin-top: auto;
+  text-align: right;
 }
