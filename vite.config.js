@@ -1,6 +1,6 @@
 export default {
   define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+    APP_VERSION: JSON.stringify(process.env.npm_package_version),
   },
   server: {
     port: 3000,
