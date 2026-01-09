@@ -37,8 +37,8 @@ jobs:
         with:
           context: .
           build-args: |
-            "VITE_WIKI_PAGE_URL=${{ secrets.VITE_WIKI_PAGE_URL }}"
-            "VITE_WIKI_TABLE_CAPTION=${{ secrets.VITE_WIKI_TABLE_CAPTION }}"
+            "VITE_WIKI_PAGE_URL=${{ vars.VITE_WIKI_PAGE_URL }}"
+            "VITE_WIKI_TABLE_CAPTION=${{ vars.VITE_WIKI_TABLE_CAPTION }}"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
