@@ -38,8 +38,6 @@ const renderTable = (rows) => {
   const years = document.getElementById("years");
   const table = document.getElementById("table");
 
-  console.log(rows / 5 + 1);
-
   years.innerHTML = Array.from({ length: rows / 5 + 1 }, (_, i) => i * 5)
     .map((year) => `<li class="year">${year}</li>`)
     .join("");
