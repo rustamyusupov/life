@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Life</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">
+        Your <span id="expectancy" class="expectancy">90</span>-Year
+        Life in Weeks
+      </h1>
+      <form id="form" class="form">
+        <div class="group">
+          <label class="label">Sex</label>
+          <div class="sex">
+            <div class="radio">
+              <input id="male" name="sex" value="male" type="radio" />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio">
+              <input id="female" name="sex" value="female" type="radio" />
+              <label for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <label class="label">Age</label>
+          <input
+            class="age"
+            id="age"
+            name="age"
+            min="0"
+            max="150"
+            type="number"
+            tabindex="0"
+          />
+        </div>
+        <div class="group">
+          <label class="label" for="country">Country</label>
+          <select id="country" class="country" name="country">
+            <option value="" disabled selected>Select country</option>
+          </select>
+        </div>
+      </form>
+      <p class="description">
+        Your sex and country affect your
+        <a id="link" class="link" href=""> average life expectancy</a>.
+      </p>
+      <section class="container">
+        <ol id="years" class="years"></ol>
+        <ol id="weeks" class="weeks"></ol>
+        <table id="table" class="table"></table>
+      </section>
+    </main>
+    <footer class="footer">
+      <p id="version" class="version"></p>
+    </footer>
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>
