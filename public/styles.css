@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   min-width: 320px;
   align-items: center;
@@ -136,6 +140,7 @@ ol {
 
 .footer {
   margin-top: auto;
+  padding-top: 12px;
   width: 100%;
 }
 
