@@ -1,5 +1,6 @@
 const DEFAULT_EXPECTANCY = 90;
 const WEEKS_IN_YEAR = 52;
+const COUNTRY = "Russia";
 
 const fetchData = async (url, caption) => {
   try {
@@ -72,7 +73,7 @@ const renderOptions = (data) => {
   const select = document.getElementById("country");
 
   Object.keys(data)
-    .sort()
+    .sort((a, b) => (b === COUNTRY) - (a === COUNTRY) || a.localeCompare(b))
     .forEach((country) => {
       const option = document.createElement("option");
       option.value = JSON.stringify({
